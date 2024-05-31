@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="bg">
+    <head>
+        <meta charset="UTF-8" />
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Krystallino" />
+
+        <title>Krystallino</title>
+
+        <link rel="preload" href="/fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/Manrope/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin />
+
+        <link rel="preload" href="/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin />
+
+        <style type="text/css">
+            @font-face {
+                font-family: 'Manrope';
+                src: url('/fonts/Manrope/Manrope-Light.eot') format('embedded-opentype'),
+                    url('/fonts/Manrope/Manrope-Light.woff2') format('woff2'),
+                    url('/fonts/Manrope/Manrope-Light.woff') format('woff'),
+                    url('/fonts/Manrope/Manrope-Light.ttf') format('truetype'),
+                    url('/fonts/Manrope/Manrope-Light.svg#Manrope') format('svg');
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Manrope';
+                src: url('/fonts/Manrope/Manrope-Regular.eot') format('embedded-opentype'),
+                    url('/fonts/Manrope/Manrope-Regular.woff2') format('woff2'),
+                    url('/fonts/Manrope/Manrope-Regular.woff') format('woff'),
+                    url('/fonts/Manrope/Manrope-Regular.ttf') format('truetype'),
+                    url('/fonts/Manrope/Manrope-Regular.svg#Manrope') format('svg');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Manrope';
+                src: url('/fonts/Manrope/Manrope-Medium.eot') format('embedded-opentype'),
+                    url('/fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
+                    url('/fonts/Manrope/Manrope-Medium.woff') format('woff'),
+                    url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype'),
+                    url('/fonts/Manrope/Manrope-Medium.svg#Manrope') format('svg');
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Manrope';
+                src: url('/fonts/Manrope/Manrope-SemiBold.eot') format('embedded-opentype'),
+                    url('/fonts/Manrope/Manrope-SemiBold.woff2') format('woff2'),
+                    url('/fonts/Manrope/Manrope-SemiBold.woff') format('woff'),
+                    url('/fonts/Manrope/Manrope-SemiBold.ttf') format('truetype'),
+                    url('/fonts/Manrope/Manrope-SemiBold.svg#Manrope') format('svg');
+                font-weight: 600;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Noto Serif';
+                src: url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.eot') format('embedded-opentype'),
+                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff2') format('woff2'),
+                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff') format('woff'),
+                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.ttf') format('truetype'),
+                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.svg#NotoSerifDisplay') format('svg');
+                font-weight: 700;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            body {
+                font-size: 16px;
+                color: #000000;
+                font-family: 'Manrope', sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 1;
+            }
+        </style>
+
+        <link rel="stylesheet" href="/src/sass/app.scss" />
+    </head>
+
+    <body>
+        <div id="app">
+            Започни работа тук. Успех! :)
+        </div>
+
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>
