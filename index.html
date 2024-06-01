@@ -1,102 +1,601 @@
 <!doctype html>
 <html lang="bg">
-    <head>
-        <meta charset="UTF-8" />
 
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<head>
+    <meta charset="UTF-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Krystallino" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-        <title>Krystallino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Krystallino" />
 
-        <link rel="preload" href="/fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/fonts/Manrope/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <title>Krystallino</title>
 
-        <link rel="preload" href="/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope/Manrope-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin />
 
-        <style type="text/css">
-            @font-face {
-                font-family: 'Manrope';
-                src: url('/fonts/Manrope/Manrope-Light.eot') format('embedded-opentype'),
-                    url('/fonts/Manrope/Manrope-Light.woff2') format('woff2'),
-                    url('/fonts/Manrope/Manrope-Light.woff') format('woff'),
-                    url('/fonts/Manrope/Manrope-Light.ttf') format('truetype'),
-                    url('/fonts/Manrope/Manrope-Light.svg#Manrope') format('svg');
-                font-weight: 300;
-                font-style: normal;
-                font-display: swap;
-            }
+    <link rel="preload" href="/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff2" as="font" type="font/woff2"
+        crossorigin />
 
-            @font-face {
-                font-family: 'Manrope';
-                src: url('/fonts/Manrope/Manrope-Regular.eot') format('embedded-opentype'),
-                    url('/fonts/Manrope/Manrope-Regular.woff2') format('woff2'),
-                    url('/fonts/Manrope/Manrope-Regular.woff') format('woff'),
-                    url('/fonts/Manrope/Manrope-Regular.ttf') format('truetype'),
-                    url('/fonts/Manrope/Manrope-Regular.svg#Manrope') format('svg');
-                font-weight: 400;
-                font-style: normal;
-                font-display: swap;
-            }
+    <style type="text/css">
+        @font-face {
+            font-family: 'Manrope';
+            src: url('/fonts/Manrope/Manrope-Light.eot') format('embedded-opentype'),
+                url('/fonts/Manrope/Manrope-Light.woff2') format('woff2'),
+                url('/fonts/Manrope/Manrope-Light.woff') format('woff'),
+                url('/fonts/Manrope/Manrope-Light.ttf') format('truetype'),
+                url('/fonts/Manrope/Manrope-Light.svg#Manrope') format('svg');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
 
-            @font-face {
-                font-family: 'Manrope';
-                src: url('/fonts/Manrope/Manrope-Medium.eot') format('embedded-opentype'),
-                    url('/fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
-                    url('/fonts/Manrope/Manrope-Medium.woff') format('woff'),
-                    url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype'),
-                    url('/fonts/Manrope/Manrope-Medium.svg#Manrope') format('svg');
-                font-weight: 500;
-                font-style: normal;
-                font-display: swap;
-            }
+        @font-face {
+            font-family: 'Manrope';
+            src: url('/fonts/Manrope/Manrope-Regular.eot') format('embedded-opentype'),
+                url('/fonts/Manrope/Manrope-Regular.woff2') format('woff2'),
+                url('/fonts/Manrope/Manrope-Regular.woff') format('woff'),
+                url('/fonts/Manrope/Manrope-Regular.ttf') format('truetype'),
+                url('/fonts/Manrope/Manrope-Regular.svg#Manrope') format('svg');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
 
-            @font-face {
-                font-family: 'Manrope';
-                src: url('/fonts/Manrope/Manrope-SemiBold.eot') format('embedded-opentype'),
-                    url('/fonts/Manrope/Manrope-SemiBold.woff2') format('woff2'),
-                    url('/fonts/Manrope/Manrope-SemiBold.woff') format('woff'),
-                    url('/fonts/Manrope/Manrope-SemiBold.ttf') format('truetype'),
-                    url('/fonts/Manrope/Manrope-SemiBold.svg#Manrope') format('svg');
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-            }
+        @font-face {
+            font-family: 'Manrope';
+            src: url('/fonts/Manrope/Manrope-Medium.eot') format('embedded-opentype'),
+                url('/fonts/Manrope/Manrope-Medium.woff2') format('woff2'),
+                url('/fonts/Manrope/Manrope-Medium.woff') format('woff'),
+                url('/fonts/Manrope/Manrope-Medium.ttf') format('truetype'),
+                url('/fonts/Manrope/Manrope-Medium.svg#Manrope') format('svg');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
 
-            @font-face {
-                font-family: 'Noto Serif';
-                src: url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.eot') format('embedded-opentype'),
-                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff2') format('woff2'),
-                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff') format('woff'),
-                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.ttf') format('truetype'),
-                    url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.svg#NotoSerifDisplay') format('svg');
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-            }
+        @font-face {
+            font-family: 'Manrope';
+            src: url('/fonts/Manrope/Manrope-SemiBold.eot') format('embedded-opentype'),
+                url('/fonts/Manrope/Manrope-SemiBold.woff2') format('woff2'),
+                url('/fonts/Manrope/Manrope-SemiBold.woff') format('woff'),
+                url('/fonts/Manrope/Manrope-SemiBold.ttf') format('truetype'),
+                url('/fonts/Manrope/Manrope-SemiBold.svg#Manrope') format('svg');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
 
-            body {
-                font-size: 16px;
-                color: #000000;
-                font-family: 'Manrope', sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                line-height: 1;
-            }
-        </style>
+        @font-face {
+            font-family: 'Noto Serif';
+            src: url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.eot') format('embedded-opentype'),
+                url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff2') format('woff2'),
+                url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.woff') format('woff'),
+                url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.ttf') format('truetype'),
+                url('/fonts/NotoSerifDisplay/NotoSerifDisplay-Bold.svg#NotoSerifDisplay') format('svg');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
 
-        <link rel="stylesheet" href="/src/sass/app.scss" />
-    </head>
+        body {
+            font-size: 16px;
+            color: #000000;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1;
+        }
+    </style>
 
-    <body>
-        <div id="app">
-            Започни работа тук. Успех! :)
+    <link rel="stylesheet" href="/src/sass/app.scss" />
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header">
+            <a href="index.html" class="logo"><img src="src/pictures/krystallino-logo.png" alt="logo" class="logo-pic"></a>
+            <div class="header-right">
+                <a href="#home">Нашите десерти</a>
+                <a href="#contact">Отзиви</a>
+                <a href="#about">За поръчки и запитвания</a>
+                <a href="">Препоръки</a>
+                <a href="#contact">Медиите за нас</a>
+                <a href="#about">Контакти</a>
+            </div>
+    </header>
+    <main>
+        <div class="welcome">
+            <h1><span class="new-line-welc">Десерти Kristallino – </span>където <span
+                    class="important-text">изкуството</span> среща <span class="important-text">десерта</span>.</h1>
+            <div class="absolute-welc-pics">
+                <div class="pics-front">
+                    <img src="/src/pictures/Firefly Strawberry on a white background 67201.png" alt="strawberry"
+                        height="73" width="75" class="welc-elements">
+                    <img src="/src/pictures/Firefly Basil leaves on a white background 59251.png" alt="mint"
+                        height="166" width="166" class="welc-elements">
+                </div>
+            </div>
+            <p class="welc-info">Отдайте се на нашите изящни творения, изработени със страст и прецизност от
+                световноизвестния сладкар Кристалин Илиев. Разгледайте нашите иновативни десерти, които обещават да
+                измамят вкусовите ви рецептори и да запалят сетивата ви.</p>
+
+
         </div>
 
-        <script type="module" src="/src/js/main.js"></script>
-    </body>
+
+
+        <!--CAKES FIRST TIME-->
+        <div class="bgd-group">
+            <div class="container-btns">
+                <a href="" class="request welc-btns">Направи заявка</a>
+                <a href="" id="learn" class="welc-btns">Научи повече</a>
+            </div>
+
+
+
+
+            <div class="flex-container">
+                <!--STRAWBERRY-->
+                <div class="flex-child ">
+                    <img src="src/pictures/strawberry-and-basil.svg" class="cake-el" alt="strawberry cake" width="302px"
+                        height="296">
+                    <img src="src/pictures/Sub Title Element.png" alt="subtitle element" class="cake-el">
+                    <div class="cake-all-info">
+                        <h1 class="cake-name">Ягода и босилек</h1>
+                        <p class="cake-info">Отпразнувайте същността на лятото със зрели ягоди, съчетани с ароматен
+                            босилек, освежаващо удоволствие за небцето.</p>
+                        <a href="#" class="cake-learn-more">научете повече</a>
+                    </div>
+                </div>
+                <!--WALNUTS-->
+                <div class="flex-child ">
+                    <img src="src/pictures/walnuts-and-honey.svg" class="cake-el" alt="strawberry cake" width="302px"
+                        height="296">
+                    <img src="src/pictures/Sub Title Element.png" alt="subtitle element" class="cake-el">
+                    <div class="cake-all-info">
+                        <h2 class="cake-name">Ягода и босилек</h2>
+                        <p class="cake-info">Отпразнувайте същността на лятото със зрели ягоди, съчетани с ароматен
+                            босилек, освежаващо удоволствие за небцето.</p>
+                        <a href="#" class="cake-learn-more">научете повече</a>
+                    </div>
+                </div>
+                <!--BLUEBERRY-->
+                <div class="flex-child ">
+                    <img src="src/pictures/bacon-and-blueberry.svg" class="cake-el" alt="strawberry cake" width="302px"
+                        height="296">
+                    <img src="src/pictures/Sub Title Element.png" alt="subtitle element" class="cake-el">
+                    <div class="cake-all-info">
+                        <h2 class="cake-name">Ягода и босилек</h2>
+                        <p class="cake-info">Отпразнувайте същността на лятото със зрели ягоди, съчетани с ароматен
+                            босилек, освежаващо удоволствие за небцето.</p>
+                        <a href="#" class="cake-learn-more">научете повече</a>
+                    </div>
+                </div>
+                <!--SUNFLOWER-->
+
+                <div class="flex-child ">
+                    <img src="src/pictures/crispy-sunflower-seed-with-cream.svg" class="cake-el" alt="strawberry cake"
+                        width="302px" height="296">
+                    <img src="src/pictures/Sub Title Element.png" alt="subtitle element" class="cake-el">
+                    <div class="cake-all-info">
+                        <h2 class="cake-name">Ягода и босилек</h2>
+                        <p class="cake-info">Отпразнувайте същността на лятото със зрели ягоди, съчетани с ароматен
+                            босилек, освежаващо удоволствие за небцето.</p>
+                        <a href="#" class="cake-learn-more">научете повече</a>
+                    </div>
+                </div>
+            </div>
+            <!--THIS GUY-->
+            <div class="all-kristalin">
+                <div class="guy">
+                    <div class="child-about-guy">
+                        <img src="src/pictures/guy.png" alt="Kristalin Iliev">
+                    </div>
+                    <div class="child-about-guy second-column">
+                        <h1 class="second-column-child"><span class="chef">Chef</span>Кристалин</h1>
+                        <img src="src/pictures/Sub Title Element.png" alt="subtitle element"
+                            class="second-column-child">
+                        <p class="second-column-child">Шеф Кристалин Илиев е световноизвестен сладкар, известен със
+                            своите иновативни и артистични
+                            творения на десерти. С повече от две десетилетия опит, той съчетава традиционни техники с
+                            модерни вкусове, завладявайки кулинарния свят чрез своята марка Krystallino. Уникалните
+                            десерти на шеф Кристалин, като кисело мляко с орехи и мед или бекон с боровинки, отразяват
+                            неговата отдаденост на качеството и креативността, спечелвайки й международно признание и
+                            лоялни последователи.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--DESSERTS CHARTS-->
+        <div class="desserts">
+            <div class="header-desserts">
+                <h1>Десерти</h1>
+                <img src="src/pictures/Sub Title Element.png" alt="subtitle element">
+                <p>внимателно селектирани вкусове</p>
+            </div>
+            <div class="all-each-desserts">
+                <div class="dessert-each">
+                    <div class="each-column">
+                        <img src="src/pictures/strawberry-and-basil.svg" alt="strawberry cake" width="302px"
+                            height="296">
+                    </div>
+                    <div class="each-column">
+                        <h1 class="cake-name cake-info-c2">Ягода и босилек</h1>
+                        <p class="cake-info cake-info-c2">Възхитителен сезонен десерт с узрели ягоди, съчетани с пресен
+                            босилек,
+                            създавайки освежаваща и ароматна вкусова комбинация, която въплъщава есенцията на лятото.
+                        </p>
+                        <p class="cake-info cake-info-c2">Основни съставки: кисело мляко, орехи, мед, захар, желатин (за
+                            консистенция),
+                            ванилов екстракт.</p>
+                    </div>
+                    <div class="each-column">
+                        <div class="column1">
+                            <div class="calorie-stuff calories">
+                                <span class="name-calorie">Калории:</span>
+                                <span class="numbers">200</span>
+                            </div>
+                            <div class="calorie-stuff fat">
+                                <span class="name-calorie">Наситени мазнини:</span>
+                                <span class="numbers">12 g</span>
+                            </div>
+                            <div class="calorie-stuff other-fat">
+                                <span class="name-calorie">Протеин:</span>
+                                <span class="numbers">3 g</span>
+                            </div>
+                            <div class="calorie-stuff carbohydrates">
+                                <span class="name-calorie">Натрий:</span>
+                                <span class="numbers">20 g</span>
+                            </div>
+                        </div>
+                        <div class="column2">
+                            <div class="calorie-stuff protein">
+                                <span class="name-calorie">Общо мазнини:</span>
+                                <span class="numbers">6 g</span>
+                            </div>
+                            <div class="calorie-stuff sugar">
+                                <span class="name-calorie">Общо въглехидрати:</span>
+                                <span class="numbers">15 g</span>
+                            </div>
+                            <div class="calorie-stuff natrium">
+                                <span class="name-calorie">Захари:</span>
+                                <span class="numbers">50 mg</span>
+                            </div>
+                            <div class="calorie-stuff cholesterol">
+                                <span class="name-calorie">Холестерол:</span>
+                                <span class="numbers">15 mg</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="all-each-desserts">
+                <div class="dessert-each">
+                    <div class="each-column">
+                        <img src="src/pictures/strawberry-and-basil.svg" alt="strawberry cake" width="302px"
+                            height="296">
+                    </div>
+                    <div class="each-column">
+                        <h1 class="cake-name cake-info-c2">Ягода и босилек</h1>
+                        <p class="cake-info cake-info-c2">Възхитителен сезонен десерт с узрели ягоди, съчетани с пресен
+                            босилек,
+                            създавайки освежаваща и ароматна вкусова комбинация, която въплъщава есенцията на лятото.
+                        </p>
+                        <p class="cake-info cake-info-c2">Основни съставки: кисело мляко, орехи, мед, захар, желатин (за
+                            консистенция),
+                            ванилов екстракт.</p>
+                    </div>
+                    <div class="each-column">
+                        <div class="column1">
+                            <div class="calorie-stuff calories">
+                                <span class="name-calorie">Калории:</span>
+                                <span class="numbers">200</span>
+                            </div>
+                            <div class="calorie-stuff fat">
+                                <span class="name-calorie">Наситени мазнини:</span>
+                                <span class="numbers">12 g</span>
+                            </div>
+                            <div class="calorie-stuff other-fat">
+                                <span class="name-calorie">Протеин:</span>
+                                <span class="numbers">3 g</span>
+                            </div>
+                            <div class="calorie-stuff carbohydrates">
+                                <span class="name-calorie">Натрий:</span>
+                                <span class="numbers">20 g</span>
+                            </div>
+                        </div>
+                        <div class="column2">
+                            <div class="calorie-stuff protein">
+                                <span class="name-calorie">Общо мазнини:</span>
+                                <span class="numbers">6 g</span>
+                            </div>
+                            <div class="calorie-stuff sugar">
+                                <span class="name-calorie">Общо въглехидрати:</span>
+                                <span class="numbers">15 g</span>
+                            </div>
+                            <div class="calorie-stuff natrium">
+                                <span class="name-calorie">Захари:</span>
+                                <span class="numbers">50 mg</span>
+                            </div>
+                            <div class="calorie-stuff cholesterol">
+                                <span class="name-calorie">Холестерол:</span>
+                                <span class="numbers">15 mg</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="all-each-desserts">
+                <div class="dessert-each">
+                    <div class="each-column">
+                        <img src="src/pictures/strawberry-and-basil.svg" alt="strawberry cake" width="302px"
+                            height="296">
+                    </div>
+                    <div class="each-column">
+                        <h1 class="cake-name cake-info-c2">Ягода и босилек</h1>
+                        <p class="cake-info cake-info-c2">Възхитителен сезонен десерт с узрели ягоди, съчетани с пресен
+                            босилек,
+                            създавайки освежаваща и ароматна вкусова комбинация, която въплъщава есенцията на лятото.
+                        </p>
+                        <p class="cake-info cake-info-c2">Основни съставки: кисело мляко, орехи, мед, захар, желатин (за
+                            консистенция),
+                            ванилов екстракт.</p>
+                    </div>
+                    <div class="each-column">
+                        <div class="column1">
+                            <div class="calorie-stuff calories">
+                                <span class="name-calorie">Калории:</span>
+                                <span class="numbers">200</span>
+                            </div>
+                            <div class="calorie-stuff fat">
+                                <span class="name-calorie">Наситени мазнини:</span>
+                                <span class="numbers">12 g</span>
+                            </div>
+                            <div class="calorie-stuff other-fat">
+                                <span class="name-calorie">Протеин:</span>
+                                <span class="numbers">3 g</span>
+                            </div>
+                            <div class="calorie-stuff carbohydrates">
+                                <span class="name-calorie">Натрий:</span>
+                                <span class="numbers">20 g</span>
+                            </div>
+                        </div>
+                        <div class="column2">
+                            <div class="calorie-stuff protein">
+                                <span class="name-calorie">Общо мазнини:</span>
+                                <span class="numbers">6 g</span>
+                            </div>
+                            <div class="calorie-stuff sugar">
+                                <span class="name-calorie">Общо въглехидрати:</span>
+                                <span class="numbers">15 g</span>
+                            </div>
+                            <div class="calorie-stuff natrium">
+                                <span class="name-calorie">Захари:</span>
+                                <span class="numbers">50 mg</span>
+                            </div>
+                            <div class="calorie-stuff cholesterol">
+                                <span class="name-calorie">Холестерол:</span>
+                                <span class="numbers">15 mg</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="all-each-desserts">
+                <div class="dessert-each">
+                    <div class="each-column">
+                        <img src="src/pictures/strawberry-and-basil.svg" alt="strawberry cake" width="302px"
+                            height="296">
+                    </div>
+                    <div class="each-column">
+                        <h1 class="cake-name cake-info-c2">Ягода и босилек</h1>
+                        <p class="cake-info cake-info-c2">Възхитителен сезонен десерт с узрели ягоди, съчетани с пресен
+                            босилек,
+                            създавайки освежаваща и ароматна вкусова комбинация, която въплъщава есенцията на лятото.
+                        </p>
+                        <p class="cake-info cake-info-c2">Основни съставки: кисело мляко, орехи, мед, захар, желатин (за
+                            консистенция),
+                            ванилов екстракт.</p>
+                    </div>
+                    <div class="each-column">
+                        <div class="column1">
+                            <div class="calorie-stuff calories">
+                                <span class="name-calorie">Калории:</span>
+                                <span class="numbers">200</span>
+                            </div>
+                            <div class="calorie-stuff fat">
+                                <span class="name-calorie">Наситени мазнини:</span>
+                                <span class="numbers">12 g</span>
+                            </div>
+                            <div class="calorie-stuff other-fat">
+                                <span class="name-calorie">Протеин:</span>
+                                <span class="numbers">3 g</span>
+                            </div>
+                            <div class="calorie-stuff carbohydrates">
+                                <span class="name-calorie">Натрий:</span>
+                                <span class="numbers">20 g</span>
+                            </div>
+                        </div>
+                        <div class="column2">
+                            <div class="calorie-stuff protein">
+                                <span class="name-calorie">Общо мазнини:</span>
+                                <span class="numbers">6 g</span>
+                            </div>
+                            <div class="calorie-stuff sugar">
+                                <span class="name-calorie">Общо въглехидрати:</span>
+                                <span class="numbers">15 g</span>
+                            </div>
+                            <div class="calorie-stuff natrium">
+                                <span class="name-calorie">Захари:</span>
+                                <span class="numbers">50 mg</span>
+                            </div>
+                            <div class="calorie-stuff cholesterol">
+                                <span class="name-calorie">Холестерол:</span>
+                                <span class="numbers">15 mg</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--ADDITIONAL INFO TO CAKES-->
+            <div class="request-making">
+                <div class="make-request-div">
+                    <p class="additional-info">Ако имате интерес към нашите вкусове можете да се свържете с нас , за да
+                        уточним цени, методи на достава и условия за съхранение.</p>
+                    <a href="#" class="request welc-btns">Направи заявка</a>
+                </div>
+
+            </div>
+
+            <!--WALNUTS-->
+
+            <div class="walnuts">
+                <div class="walnuts-c1">
+                    <div class="overlaping-walnuts">
+                        <h1>Отзиви от клиенти</h1>
+                        <img src="src/pictures/Firefly Walnuts on a white background 1445.png" alt="walnuts"
+                            class="walnuts-pic">
+                    </div>
+                    <img src="src/pictures/Sub Title Element.png" alt="subtitle element">
+                </div>
+                <div class="walnuts-c2">
+                    <div class="grade">
+                        <span class="autor-name">Майкъл Томпсън – ⭐⭐⭐⭐⭐</span>
+                        <p class="autor-text">„Имах удоволствието да опитам десерта с ягоди и босилек и той надмина
+                            всички очаквания. Свежестта на ягодите, съчетана с фината нотка на босилек, беше истинско
+                            откровение. Нямам търпение да поръчайте отново!"</p>
+                    </div>
+                    <div class="grade">
+                        <span class="autor-name">Майкъл Томпсън – ⭐⭐⭐⭐⭐</span>
+                        <p class="autor-text">„Имах удоволствието да опитам десерта с ягоди и босилек и той надмина
+                            всички очаквания. Свежестта на ягодите, съчетана с фината нотка на босилек, беше истинско
+                            откровение. Нямам търпение да поръчайте отново!"</p>
+                    </div>
+                    <div class="grade">
+                        <span class="autor-name">Майкъл Томпсън – ⭐⭐⭐⭐⭐</span>
+                        <p class="autor-text">„Имах удоволствието да опитам десерта с ягоди и босилек и той надмина
+                            всички очаквания. Свежестта на ягодите, съчетана с фината нотка на босилек, беше истинско
+                            откровение. Нямам търпение да поръчайте отново!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--FORM-->
+
+            <div class="big-form">
+                <div class="before-form">
+                    <h1>Запитвания и заявки</h1>
+                    <img src="src/pictures/Sub Title Element.png" alt="subtitle element">
+                    <p>За да направите поръчка или запитване за нашите десерти, моля свържете се с нас на: </p>
+                </div>
+                <img src="src/pictures/Firefly Single Basil leaves on a white background 1446.png" alt="leaves basil" class="basil-leaves">
+                <div class="form-columns">
+                    <div class="for-form">
+                        <div class="form-info">
+                            <h6>Имейл:</h6>
+                            <h3>info@krystallino.com</h3>
+                            <h6>Адрес:</h6>
+                            <h3>123 Вкусната улица, Девин, България</h3>
+                            <h6>Телефон:</h6>
+                            <h3>+359 (899) 456-7890</h3>
+                        </div>
+                    </div>
+                        <form method="get">
+                            <label for="">Вашите имена</label>
+                            <input type="text" placeholder="placeholder">
+                            <label for="">Телефон за връзка</label>
+                            <input type="tel" name="" id="" placeholder="placeholder">
+                            <label for="">Имейл за контакти</label>
+                            <input type="email" name="" id="" placeholder="placeholder">
+                            <label for="">Вашият въпрос или заявка</label>
+                            <textarea name="" id="" rows="3" cols="30" placeholder="placeholder"></textarea>
+                            <a href="" class="request welc-btns">Направи заявка</a>
+                        </form>
+                </div>             
+            </div>
+            </div>
+
+<!--MEDIAS -->
+<img src="src/pictures/Firefly Basil leaves on a white background 59251.png" alt="basil" class="rotated-basil">
+
+            <div class="media">
+                <h1 class="heading-media">В медиите</h1>
+                <img src="src/pictures/Sub Title Element.png" alt="subtitle element">
+                <div class="media-s1">
+                    <p>В медиите: </span>
+                    <h2 class="heading-h2-media">Krystallino: Предефиниране на иновациите в десерта</h2>
+                    <span>Източник: сп. Кулинарни изкушения</span>
+                    <p class="read-media">Krystallino, ръководен от известния сладкар Кристалин Илчев, революционизира десертната сцена с иновативните си творения. От кремообразното кисело мляко, орехи и меден десерт до неочакваното съчетание на бекон и боровинки, всяко лакомство е щателно изработено, за да измами вкусовите пъпки и да разшири границите на вкуса. С фокус върху качествените съставки и вниманието към детайла, Krystallino продължава да завладява публиката и да предефинира иновациите в десертите.
+                    </p>
+                    <a href="" class="request welc-btns">Прочети статията</a>
+                </div>
+                <img src="src/pictures/Firefly Basil leaves on a white background 59251.png" alt="basil" class="rotated-basil-lower">
+
+                <div class="media-s1">
+                    <p>В медиите: </span>
+                    <h2 class="heading-h2-media">Krystallino: A Sweet Success Story
+                    </h2>
+                    <span>Източник: сп. Кулинарни изкушения
+                    </span>
+                    <p class="read-media">Страстта на главния готвач Кристалин Илчев към сладкишите доведе до създаването на Krystallino, марка, известна със своята креативност и артистичност в приготвянето на десерти. С нарастваща база от фенове и разширяващо се меню от декадентски изкушения, Krystallino прави вълни в кулинарния свят. Отдадеността на главния готвач Кристалин на качеството и желанието й да предизвиква радост с всяка хапка затвърдиха мястото на Krystallino като сладка история на успеха в света на десертите.
+                    </p>
+                    <a href="" class="request welc-btns">Прочети статията</a>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <div class="pics-footer">
+            <img src="src/pictures/Firefly Walnuts on a white background 1445.png" alt="walnuts">
+            <img src="src/pictures/krystallino-logo.png" alt="logo" class="logo-pic">
+        </div>
+        <div class="info-guy-div">
+            <h3 class="info-guy">info@krystallino.com </h3>
+            <h3 class="info-guy">+359 (899) 456-7890 </h3>
+        </div>
+        <div class="final-info pages">
+            <a href="">Нашите десерти</a>
+            <a href="">Отзиви</a>
+            <a href="">За поръчки и запитвания</a>
+            <a href="">Препоръки</a>
+            <a href="">Медиите за нас</a>
+            <a href="">Контакти</a>
+        </div>
+        <div class="final-info2 pages">
+            <a href="">Правила и условия</a>
+            <span>|</span>
+            <a href="">Политика за поверителност</a>
+            <span>|</span>
+            <span>Copyright © 2024 Krystallino. Всички права запазени.</span>
+        </div>
+    </footer>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>

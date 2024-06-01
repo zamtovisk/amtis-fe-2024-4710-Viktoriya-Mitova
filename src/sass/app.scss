@@ -1,1 +1,484 @@
-// Продължи с твоя SCSS или обикновен CSS код тук.
+body {
+    background-color: #FDF8EC;
+}
+
+p {
+    font-family: 'Manrope';
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Noto Serif';
+    font-size: 80px;
+}
+h2{
+    font-family: 'Noto Serif'; 
+}
+
+
+.header {
+    overflow: hidden;
+    padding: 20px 10px;
+}
+.logo-pic{
+    width: 250px;
+}
+.header a {
+    float: left;
+    color: #9B582E;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header-right {
+    float: right;
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+}
+
+
+/*MAIN*/
+/*WELCOME*/
+.welcome {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 864px;
+}
+
+.welcome h1 {
+    color: #9B582E;
+    font-weight: 700;
+    font-size: 80px;
+    text-align: center;
+    font-family: Noto Serif;
+}
+
+.important-text {
+    color: #533019;
+}
+
+.absolute-welc-pics {
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+}
+
+.pics-front {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.welc-elements:nth-child(1) {
+    position: relative;
+    left: 40px;
+}
+
+.welc-elements:nth-child(2) {
+    position: relative;
+    left: 700px;
+}
+
+.welc-info {
+    width: 760px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Manrope';
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+
+.container-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Manrope';
+    margin-bottom: 60px;
+}
+
+.welc-btns {
+    border-radius: 32px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.request {
+    background-color: #9B582E;
+    color: white;
+}
+
+#learn {
+    margin-left: 10px;
+    border: 1px solid #9B582E;
+    color: #9B582E;
+}
+
+/*CAKES FIRST TIME*/
+.bgd-group,footer {
+    background: url('@/pictures/Group.png');
+    background-position: top;
+    background-repeat: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 180px;
+}
+
+
+.flex-child {
+    padding: 10px;
+    margin: 10px;
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #FBEED0;
+}
+
+
+@media (max-width: 800px) {
+    .flex-child {
+        flex: 100%;
+    }
+}
+
+.cake-all-info {
+    width: 234px;
+}
+
+.cake-el:nth-child(1) {
+    margin: -70px 0px 20px 0px;
+}
+
+.cake-name {
+    font-size: 30px;
+    text-align: center;
+    font-family: "Noto Serif";
+}
+
+.cake-info {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cake-learn-more {
+    text-transform: uppercase;
+    color: #9B582E;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/*THIS GUY*/
+.all-kristalin {
+    display: flex;
+    justify-content: center;
+}
+
+.guy {
+    width: 1138px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.second-column {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 734px;
+}
+
+.second-column-child {
+    margin-bottom: 50px;
+}
+
+.second-column-child:nth-child(1) {
+    font-size: 80px;
+}
+
+.second-column-child:nth-child(2) {
+    font-family: 'Manrope';
+}
+
+.chef {
+    display: block;
+}
+
+/*DESSERTS*/
+.desserts {
+    margin: 50px;
+    background-color: #FBF4DF;
+    width: 1360px;
+}
+
+.header-desserts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.all-each-desserts {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.dessert-each {
+    padding-top: 30px;
+    display: flex;
+    width: 1280px;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FEFCF6;
+    border-radius: 16px;
+}
+@media screen and (max-width:500px) {
+    .dessert-each{
+        flex-direction: column;
+        width: 600px;
+    }
+    .request-making{
+        width: 600px;
+    }
+    .desserts{
+        width: 600px;
+    }
+    .walnuts{
+        flex-direction: column;
+    }
+    .basil-leaves{
+        left:400px;
+    }
+   
+}
+.each-column:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 351px;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.each-column:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    background-color: #FAE8DB;
+    border-radius: 24px;
+    padding: 25px;
+}
+
+.calorie-stuff {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.cake-info-c2 {
+    margin-bottom: 10px;
+}
+
+.numbers {
+    font-weight: 900;
+    font-family: 'Noto Serif';
+}
+
+/*ADDITIONAL INFO CAKES*/
+.request-making {
+    display: flex;
+    justify-content: center;
+}
+
+.make-request-div {
+    display: flex;
+    padding: 25px;
+    flex-direction: row;
+    align-items: center;
+    width: 1280px;
+    margin-top: 30px;
+    background-color: #F9EECD;
+    border-radius: 8px;
+}
+
+.additional-info {
+    flex: 65%;
+}
+
+/*WALNUTS*/
+.walnuts {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+}
+
+.overlaping-walnuts {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+}
+
+.walnuts-pic {
+    position: absolute;
+    margin-left: 380px;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.walnuts-c2 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.autor-name{
+    font-weight: 700;
+}
+
+/*FORM*/
+.big-form{
+    margin: 50px 100px 50px 100px;
+}
+.before-form{
+ display: flex;
+ flex-direction: column;
+    align-items: center;
+}
+.for-form, form{
+    flex: 50%;
+}
+.form-columns{
+    display: flex;
+    flex-direction: row;
+    margin-top:60px;
+}
+label,input,textarea{
+    display: block;
+    margin-bottom:10px;
+}
+input{
+    padding: 10px;
+    margin-bottom: 30px;
+}
+label{
+    font-weight: 700;
+    font-family: 'Manrope';
+}
+form{
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #F9EECD;
+    display: flex;
+    flex:20%;
+    flex-direction: column;
+    align-items: center;
+    align-items: self-start;
+}
+input,textarea{
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-family: 'Manrope';
+}
+.basil-leaves{
+    position: absolute;
+    left:1150px;
+    
+}
+/*MEDIA*/
+.rotated-basil{
+    position: absolute;
+    left:-80px;
+    transform: rotate(45deg);
+    width: 250px;
+    height: 250px;
+}
+.rotated-basil-lower{
+    position: relative;
+    left:800px
+}
+.media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.media-s1{
+    width: 750px;
+}
+.heading-media{
+    margin-top: 0px;
+}
+.read-media{
+    margin-bottom:90px;
+}
+.heading-h2-media{
+    font-size: 50px;
+}
+/*footer*/
+.pics-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-guy{
+    display: inline;
+    text-align: center;
+    margin: 5px;
+}
+.info-guy-div{
+    text-align: center;
+}
+.final-info,.final-info2{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.final-info a{
+    color:black;
+    text-decoration: none;
+}
+.pages a, .pages span{
+    padding-left: 10px;
+}
+.final-info:nth-child(2){
+    color:6E6E6E;
+}
